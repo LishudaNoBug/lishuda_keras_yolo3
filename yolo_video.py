@@ -7,6 +7,7 @@ from PIL import Image
     暴露在最外层的文件，直接提供给用户使用，内部调用的是yolo.py文件
 """
 
+# 这是第二步###########################
 # def检测图片，传入参数是yolo.py的对象
 def detect_img(yolo):
     while True:
@@ -23,6 +24,7 @@ def detect_img(yolo):
 
 FLAGS = None
 
+# 这是第一步 ################
 if __name__ == '__main__':
     # class YOLO defines the default value, so suppress any default here 因为yolo类已经有默认值了所以这里就没写
     parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS)

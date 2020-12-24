@@ -53,12 +53,12 @@ class YOLO(object):
     def __init__(self, **kwargs):
         self.__dict__.update(self._defaults) # set up default values
         self.__dict__.update(kwargs) # and update with user overrides
-        self.class_names = self._get_class()
+        self.class_names = self._get_class()    # 获取分类List
         self.anchors = self._get_anchors()
         self.sess = K.get_session()     # 这个项目是tensorflow1写的，tf2会报错。import as tf     self.sess = tf.compat.v1.keras.backend.get_session()   https://blog.csdn.net/weixin_41010198/article/details/107659012
         self.boxes, self.scores, self.classes = self.generate()
 
-    # 获取检测类别
+    # 该方法读取分类文件，返回[person,bicycle,car......]这样的List，主要作用是索引与label标签一一对应：0-人，1-自行车，2-汽车
     def _get_class(self):
         classes_path = os.path.expanduser(self.classes_path)
         with open(classes_path) as f:
@@ -116,6 +116,7 @@ class YOLO(object):
                 score_threshold=self.score, iou_threshold=self.iou)
         return boxes, scores, classes
 
+    # 这是第三步 #
     # 检测图片，输入原始图片，输出识别后的图片
     def detect_image(self, image):
         start = timer()
@@ -123,52 +124,52 @@ class YOLO(object):
         if self.model_image_size != (None, None):
             assert self.model_image_size[0]%32 == 0, 'Multiples of 32 required'     # 必须为32的倍数
             assert self.model_image_size[1]%32 == 0, 'Multiples of 32 required'
-            boxed_image = letterbox_image(image, tuple(reversed(self.model_image_size)))    # 填充图像
+            boxed_image = letterbox_image(image, tuple(reversed(self.model_image_size)))    # 填充/缩放图像为默认的416x416
         else:
             new_image_size = (image.width - (image.width % 32),image.height - (image.height % 32))
             boxed_image = letterbox_image(image, new_image_size)
-        image_data = np.array(boxed_image, dtype='float32')
+        image_data = np.array(boxed_image, dtype='float32')     # 将图片转为ndarray？？
 
-        print(image_data.shape)
-        image_data /= 255.
-        image_data = np.expand_dims(image_data, 0)  # Add batch dimension.
+        print(image_data.shape)     # 打印ndarray维度 416x416x3
+        image_data /= 255.  # 转换为0~1
+        image_data = np.expand_dims(image_data, 0)  # Add batch dimension.  添加一个批次的维度
 
-        out_boxes, out_scores, out_classes = self.sess.run(
-            [self.boxes, self.scores, self.classes],
-            feed_dict={
-                self.yolo_model.input: image_data,
-                self.input_image_shape: [image.size[1], image.size[0]],
+        # 这个是核心。调用模型，返回 out_boxes, out_scores, out_classes 已经是结果了
+        out_boxes, out_scores, out_classes = self.sess.run(         # 传入的参数：
+            [self.boxes, self.scores, self.classes],                    # 盒子、得分、类别
+            feed_dict={                                                 # 字典：
+                self.yolo_model.input: image_data,                      # 输入图像0~1，4维
+                self.input_image_shape: [image.size[1], image.size[0]], # 原始图像的尺寸
                 K.learning_phase(): 0
             })
 
-        print('Found {} boxes for {}'.format(len(out_boxes), 'img'))
+        print('Found {} boxes for {}'.format(len(out_boxes), 'img'))    # # 检测出的盒子（框）
 
-        font = ImageFont.truetype(font='font/FiraMono-Medium.otf',
-                    size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
-        thickness = (image.size[0] + image.size[1]) // 300
+        font = ImageFont.truetype(font='font/FiraMono-Medium.otf',size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))    # 字体
+        thickness = (image.size[0] + image.size[1]) // 300      # 厚度？？
 
         for i, c in reversed(list(enumerate(out_classes))):
-            predicted_class = self.class_names[c]
-            box = out_boxes[i]
-            score = out_scores[i]
+            predicted_class = self.class_names[c]   # 通过索引去List取出对应分类label
+            box = out_boxes[i]  # 框[]
+            score = out_scores[i]    # 置信度
 
-            label = '{} {:.2f}'.format(predicted_class, score)
-            draw = ImageDraw.Draw(image)
-            label_size = draw.textsize(label, font)
+            label = '{} {:.2f}'.format(predicted_class, score)  # 预测出的标签
+            draw = ImageDraw.Draw(image)    # 画图
+            label_size = draw.textsize(label, font)     # 图上的标签文字
 
-            top, left, bottom, right = box
+            top, left, bottom, right = box  # box的四个点坐标
             top = max(0, np.floor(top + 0.5).astype('int32'))
             left = max(0, np.floor(left + 0.5).astype('int32'))
             bottom = min(image.size[1], np.floor(bottom + 0.5).astype('int32'))
             right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
-            print(label, (left, top), (right, bottom))
+            print(label, (left, top), (right, bottom))      # boat 1.00    (111, 0) (924, 559)
 
-            if top - label_size[1] >= 0:
+            if top - label_size[1] >= 0:     # 标签文字
                 text_origin = np.array([left, top - label_size[1]])
             else:
                 text_origin = np.array([left, top + 1])
 
-            # My kingdom for a good redistributable image drawing library.
+            # My kingdom for a good redistributable image drawing library.  画框
             for i in range(thickness):
                 draw.rectangle(
                     [left + i, top + i, right - i, bottom - i],
