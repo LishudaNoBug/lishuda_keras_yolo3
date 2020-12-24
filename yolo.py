@@ -120,10 +120,10 @@ class YOLO(object):
     def detect_image(self, image):
         start = timer()
 
-        if self.model_image_size != (None, None):    # 416x416, 416=32*13，必须为32的倍数，最小尺度是除以32
-            assert self.model_image_size[0]%32 == 0, 'Multiples of 32 required'
+        if self.model_image_size != (None, None):
+            assert self.model_image_size[0]%32 == 0, 'Multiples of 32 required'     # 必须为32的倍数
             assert self.model_image_size[1]%32 == 0, 'Multiples of 32 required'
-            boxed_image = letterbox_image(image, tuple(reversed(self.model_image_size)))
+            boxed_image = letterbox_image(image, tuple(reversed(self.model_image_size)))    # 填充图像
         else:
             new_image_size = (image.width - (image.width % 32),image.height - (image.height % 32))
             boxed_image = letterbox_image(image, new_image_size)

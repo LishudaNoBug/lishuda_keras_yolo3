@@ -25,17 +25,18 @@ def compose(*funcs):
     else:
         raise ValueError('Composition of empty sequence not supported.')
 
+# 填充图片
 def letterbox_image(image, size):
     '''resize image with unchanged aspect ratio using padding'''
-    iw, ih = image.size
-    w, h = size
-    scale = min(w/iw, h/ih)
-    nw = int(iw*scale)
-    nh = int(ih*scale)
+    iw, ih = image.size     # 原始图像是1200x1800
+    w, h = size     # 转换为416x416
+    scale = min(w/iw, h/ih)     # 转换比例
+    nw = int(iw*scale)  # 新图像的宽，保证新图像是等比下降的
+    nh = int(ih*scale)  # 新图像的高
 
-    image = image.resize((nw,nh), Image.BICUBIC)
-    new_image = Image.new('RGB', size, (128,128,128))
-    new_image.paste(image, ((w-nw)//2, (h-nh)//2))
+    image = image.resize((nw,nh), Image.BICUBIC)     # 缩小图像
+    new_image = Image.new('RGB', size, (128,128,128))   # 生成灰色图像
+    new_image.paste(image, ((w-nw)//2, (h-nh)//2))   # 将图像填充为中间图像，两侧为灰色的样式
     return new_image
 
 def rand(a=0, b=1):
