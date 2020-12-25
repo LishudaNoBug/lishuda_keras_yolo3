@@ -51,8 +51,8 @@ class YOLO(object):
             return "Unrecognized attribute name '" + n + "'"
 
     def __init__(self, **kwargs):
-        self.__dict__.update(self._defaults) # set up default values
-        self.__dict__.update(kwargs) # and update with user overrides
+        self.__dict__.update(self._defaults) # set up default values    设置默认值
+        self.__dict__.update(kwargs) # and update with user overrides   将用户自定义的覆盖掉默认的
         self.class_names = self._get_class()    # 获取分类List
         self.anchors = self._get_anchors()
         self.sess = K.get_session()     # 这个项目是tensorflow1写的，tf2会报错。import as tf     self.sess = tf.compat.v1.keras.backend.get_session()   https://blog.csdn.net/weixin_41010198/article/details/107659012
@@ -134,8 +134,8 @@ class YOLO(object):
         image_data /= 255.  # 转换为0~1
         image_data = np.expand_dims(image_data, 0)  # Add batch dimension.  添加一个批次的维度
 
-        # 这个是核心。调用模型，返回 out_boxes, out_scores, out_classes 已经是结果了
-        out_boxes, out_scores, out_classes = self.sess.run(         # 传入的参数：
+        # 这个是核心中的核心。调用模型，返回 out_boxes, out_scores, out_classes 已经是结果了
+        out_boxes, out_scores, out_classes = self.sess.run(         # sess.run是tensorflow的方法，传入的参数：
             [self.boxes, self.scores, self.classes],                    # 盒子、得分、类别
             feed_dict={                                                 # 字典：
                 self.yolo_model.input: image_data,                      # 输入图像0~1，4维
@@ -169,15 +169,16 @@ class YOLO(object):
             else:
                 text_origin = np.array([left, top + 1])
 
-            # My kingdom for a good redistributable image drawing library.  画框
+            # My kingdom for a good redistributable image drawing library.
+            # 画框
             for i in range(thickness):
                 draw.rectangle(
                     [left + i, top + i, right - i, bottom - i],
                     outline=self.colors[c])
-            draw.rectangle(
+            draw.rectangle( # 文字背景
                 [tuple(text_origin), tuple(text_origin + label_size)],
                 fill=self.colors[c])
-            draw.text(text_origin, label, fill=(0, 0, 0), font=font)
+            draw.text(text_origin, label, fill=(0, 0, 0), font=font)    # 文字
             del draw
 
         end = timer()

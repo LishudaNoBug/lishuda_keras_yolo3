@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>panda1.jpg</filename>
+	<path>E:\ideaProject\lishuda-keras(tf2)-yolo3-master（这原本是qqwweee的keras yolov3）\VOCdevkit\VOC2007\JPEGImages\panda1.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>500</width>
+		<height>644</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>panda</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2</xmin>
+			<ymin>45</ymin>
+			<xmax>492</xmax>
+			<ymax>638</ymax>
+		</bndbox>
+	</object>
+</annotation>

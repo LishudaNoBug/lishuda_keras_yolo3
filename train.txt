@@ -1,0 +1,3 @@
+E:\ideaProject\lishuda-keras(tf2)-yolo3-master（这原本是qqwweee的keras yolov3）/VOCdevkit/VOC2007/JPEGImages/panda.jpg 68,36,219,254,0
+E:\ideaProject\lishuda-keras(tf2)-yolo3-master（这原本是qqwweee的keras yolov3）/VOCdevkit/VOC2007/JPEGImages/panda1.jpg 2,45,492,638,0
+E:\ideaProject\lishuda-keras(tf2)-yolo3-master（这原本是qqwweee的keras yolov3）/VOCdevkit/VOC2007/JPEGImages/panda2.jpg 40,93,446,700,0

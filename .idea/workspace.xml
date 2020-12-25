@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c5c943b-4a11-4f8f-b55f-d478ce1b1698" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2007/Annotations/panda.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2007/Annotations/panda1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2007/Annotations/panda2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2007/ImageSets/Main/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2007/ImageSets/Main/train.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2007/ImageSets/Main/trainval.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2007/ImageSets/Main/val.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2007/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/val.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voc_annotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/voc_annotation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yolo.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolo_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_video.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov3.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/yolov3.cfg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,24 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kmeans.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yolo3/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="700">
               <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
               <folding>
                 <element signature="e#40#68#0" expanded="true" />
@@ -71,27 +66,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yolo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="156" column="14" lean-forward="true" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
+            <state relative-caret-position="532">
+              <caret line="99" column="57" lean-forward="true" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
               <folding>
                 <element signature="e#102#117#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model_data/coco_classes.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yolo_video.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,13 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img_path</find>
-      <find>detect</find>
-      <find>detect_image</find>
-      <find>detect_video</find>
-      <find>--im</find>
-      <find>os.environ</find>
-      <find>pretrained_path</find>
       <find>input_shape</find>
       <find>K.get_session()</find>
       <find>sessi</find>
@@ -131,6 +102,13 @@
       <find>ImageFont</find>
       <find>ImageDraw</find>
       <find>Image</find>
+      <find>thickness</find>
+      <find>model_path</find>
+      <find>plan</find>
+      <find>yolo</find>
+      <find>bear</find>
+      <find>cup</find>
+      <find>boat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,13 +117,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/yolov3.cfg" />
         <option value="$PROJECT_DIR$/kmeans.py" />
         <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/yolo3/model.py" />
         <option value="$PROJECT_DIR$/yolo3/utils.py" />
         <option value="$PROJECT_DIR$/yolo_video.py" />
         <option value="$PROJECT_DIR$/yolo.py" />
+        <option value="$PROJECT_DIR$/voc_annotation.py" />
+        <option value="$PROJECT_DIR$/yolov3.cfg" />
       </list>
     </option>
   </component>
@@ -180,11 +159,6 @@
               <item name="lishuda-keras(tf2)-yolo3-master（这原本是qqwweee的keras yolov3）" type="462c0819:PsiDirectoryNode" />
               <item name="model_data" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lishuda_keras_yolo3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lishuda-keras(tf2)-yolo3-master（这原本是qqwweee的keras yolov3）" type="462c0819:PsiDirectoryNode" />
-              <item name="yolo3" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -196,13 +170,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/VOCdevkit" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaProject\lishuda-keras(tf2)-yolo3-master（这原本是qqwweee的keras yolov3）\VOCdevkit" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -217,6 +196,28 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.yolo_video">
+    <configuration name="voc_annotation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="lishuda-qqwweee-keras-yolo3-master(github-qqwweee的基于keras的yolov3模型)" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/voc_annotation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="yolo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="lishuda-qqwweee-keras-yolo3-master(github-qqwweee的基于keras的yolov3模型)" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -264,6 +265,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.yolo_video" />
+        <item itemvalue="Python.voc_annotation" />
         <item itemvalue="Python.yolo" />
       </list>
     </recent_temporary>
@@ -282,7 +284,8 @@
       <workItem from="1608722333814" duration="3329000" />
       <workItem from="1608772990164" duration="12578000" />
       <workItem from="1608790782121" duration="135000" />
-      <workItem from="1608791859910" duration="3218000" />
+      <workItem from="1608791859910" duration="9667000" />
+      <workItem from="1608859181724" duration="1695000" />
     </task>
     <task id="LOCAL-00001" summary="注释">
       <created>1608793191908</created>
@@ -291,17 +294,23 @@
       <option name="project" value="LOCAL" />
       <updated>1608793191908</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="注释">
+      <created>1608795319424</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608795319424</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30936000" />
+    <option name="totallyTimeSpent" value="39080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7294282" visible="true" weight="0.16487935" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7294282" visible="true" weight="0.16689008" />
       <window_info id="Structure" order="1" sideWeight="0.27057183" side_tool="true" weight="0.23994638" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -310,7 +319,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6889819" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25139666" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32122904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -341,7 +350,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="注释" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lishuda_keras_yolo3$yolo_video.coverage" NAME="yolo_video Coverage Results" MODIFIED="1608794036406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lishuda_keras_yolo3$voc_annotation.coverage" NAME="voc_annotation Coverage Results" MODIFIED="1608802383251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lishuda_keras_yolo3$yolo_video.coverage" NAME="yolo_video Coverage Results" MODIFIED="1608803980655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lishuda_qqwweee_keras_yolo3_master_github_qqwweeekerasyolov3_____tensorflow2$yolo_video.coverage" NAME="yolo_video Coverage Results" MODIFIED="1608789783377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lishuda_keras_yolo3$yolo.coverage" NAME="yolo Coverage Results" MODIFIED="1608794009745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lishuda_qqwweee_keras_yolo3_master_github_qqwweeekerasyolov3__tf2$yolo_video.coverage" NAME="yolo_video Coverage Results" MODIFIED="1608790816174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -352,26 +362,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_data/tiny_yolo_anchors.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model_data/voc_classes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coco_annotation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yolov3.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-364">
-          <caret line="3" column="12" selection-start-line="3" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model_data/yolo_anchors.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -428,6 +418,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.IntelliJIdea2019.1/system/python_stubs/284647475/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="4292" column="6" selection-start-line="4292" selection-start-column="6" selection-end-line="4292" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yolo_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coco_annotation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/val.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/voc_annotation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_data/voc_classes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yolov3.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="614" column="8" lean-forward="true" selection-start-line="614" selection-start-column="8" selection-end-line="614" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_data/coco_classes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1708">
@@ -445,16 +502,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.IntelliJIdea2019.1/system/python_stubs/284647475/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="4292" column="6" selection-start-line="4292" selection-start-column="6" selection-end-line="4292" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yolo3/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
+        <state relative-caret-position="700">
           <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
           <folding>
             <element signature="e#40#68#0" expanded="true" />
@@ -462,23 +512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yolo_video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model_data/coco_classes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/yolo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="156" column="14" lean-forward="true" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
+        <state relative-caret-position="532">
+          <caret line="99" column="57" lean-forward="true" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
           <folding>
             <element signature="e#102#117#0" expanded="true" />
           </folding>
